@@ -4,8 +4,7 @@
 	<title>The fiber Group</title>
 	<style>
 		body{margin:0; background-color:#ffffffff; color:#000000ff;}
-		#fiber-logo{width:10%; height:auto; display:inline-block;}
-		#fiber-logo pre{font-family:monospace; margin:1ch; }
+		#fiber-logo{width:10%; font-size:70px; position:relative; top:40ch; left:40%; color:rgb(0, 0, 0);}
 		#main-title{display:inline-block;}
 		.div {
 			position:absolute;
@@ -24,6 +23,10 @@
 			height:50ch;
 			width:50vw;			
 			transition: margin 0.3s ease-in-out;
+		}
+		@media only screen and (max-width: 1500px) {
+			.segment{overflow-y:scroll;}
+			
 		}
 		#title{top:5ch; left:3vw; z-index:20; background-color:#FFDA26ff; color:#3E0612;}
 
@@ -55,20 +58,20 @@
 			margin-top:10ch;
 		}
 		#height{
-			height:200ch;
+			height:150ch;
 		}
 	</style>
 </head>
 <body>
+	<div id="fiber-logo">
+		<code><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___f<br>&nbsp;&nbsp;___/___i<br>_/__&nbsp;\___b<br>&nbsp;&nbsp;\&nbsp;\____e<br>&nbsp;&nbsp;&nbsp;\_____r<br></pre></code>
+	</div>
 	<div id="height">
 
 	</div>
 	<div id="title" class="segment">
 	
 		<h1 id="main-title">The fiber Group</h1>
-		<div id="fiber-logo">
-			<code><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___f<br>&nbsp;&nbsp;___/___i<br>_/__&nbsp;\___b<br>&nbsp;&nbsp;\&nbsp;\____e<br>&nbsp;&nbsp;&nbsp;\_____r<br></pre></code>
-				</div>
 		<p>
 			The fiber Group is the body of authors responsible for The fiber Language and Environment Standard, or "fiber".
 			We also develop the reference implementation of fiber as well.
@@ -90,25 +93,18 @@
 	<div id="portability" class="segment">
 		<h1>Portability</h1>
 		<p>
-			The fiber Environment is separate from the programming language.
-			Bran is a self-contained computer architecture, similar to the ones used by C or Rust, with it's own RISC-style instruction format and binary object format.
-			The instruction set for Bran posesses a few abstractions to ensure that it's architecture-independent for most hardware.
-			Otherwise, it has a near one-to-one relationship with many other instruction set architectures.
-			The BOF object format is capable of containing not only Bran programs, but any other binary format including native hardware instructions.
+			Bran, the fiber Environment, is a self-contained ,abstract, computer architecture model, similar to the ones used in C and Rust.
+			Its instruction set, BRISC, has a near one-to-one instruction correlation with many other instruction set architectures.
+			It has a minimal amount of abstractions, enough to guarantee proper memory alignment and data type handling across many different architectures.
+			The BOF object format is capable not only of storing Bran programs, but any other binary format as well.
 		</p>
 		<p>
-			This simplicity brings several advantages.
-			The first is the same "write once, run anywhere" level of portability that other virtual machine-based languages aim for.
-			The second is that it allows implementors to support the fiber programming language with less overhead.
-			Normally, an entire compiler or abstract virtual machine would have to be written or ported for a new architecture to support a programming language.
-			This is a big undertaking.
-		</p>
-		<p>
-			The fiber Environment focuses on reducing the minimum work needed to bring a language to a new architecture.
-			The Broccoli program is a glorified linker/loader.
-			It's only responsibility is to load BOF files, translate any Bran instructions to native instructions, and execute them.
-			The functions Broccoli performs take much less time to implement compared to a traditional language runtime.
-			The payoff is twofold, fiber is cheaper and faster to support, and once Broccoli is implemented, <i>any and all existing Bran programs in the world can be run on that system with native performance.</i>
+			Bran provides the same "write once, run anywhere" utility of more complex abstract virtual machines.
+			Unlike other abstract environments, the entire Bran architecture is facilitated by the glorified linking loader, Broccoli.
+			The advantage of Bran is twofold. 
+			It is much cheaper and faster to implement:
+			Only Broccoli and a BOF object library for system interaction are required.
+			Additionally, once Broccoli is implemented, <i>any and all existing Bran programs in the world can be run on the host system with native performance.</i>
 		</p>
 	</div>
 	</div>
@@ -123,10 +119,10 @@
 			There is no reliable way to verify that the implementation or even the programming language used for implementation will conform to the verification it was based off of and this has become a sticky situation for many projects.
 		</p>
 		<p>
-			fiber solves this by providing both automated proving capabilities as well as an imperative programming language as part of the same compilation environment.
+			fiber solves this by providing both automated proving capabilities as well as an imperative programming language as part of the same language environment.
 			Logic syntax similar to what is found in automated theorem proving languages can be included as annotation to any piece of fiber syntax.
 			Directive statements can than be used to engage fiber's proof system to verify any aspect of a program.
-			This closes the gap because the types, functions, and variables that would normally be locked inside a foreign proof environment are now part of the implementation language and part of the real, executable program being verified.
+			This closes the gap between proofs and programs because the types, functions, and variables that would normally be locked inside a foreign proof environment are now part of the implementation language and part of the real, executable program being verified.
 		</p>
 	</div>
 	</div>
@@ -140,12 +136,12 @@
 			There is no volatility that comes from systems developed by experimenting with the implementation first.
 			The standard documentation is also controlled by a limited number of people.
 			fiber is only "open" regarding its use, not its contributions.
-			This spares fiber from degradation by the introduction of fads which has happened to other languages.
+			This spares fiber from degradation by attempts to chase after temporary and stylistic "fads".
 		</p>
 		<p>
 			The fiber programming language also provides a rich type system alongside its proof syntax.
-			Program state can be controlled with a fine granularity using dependent and substructural datatyping.
-			This helps avoid resource handling errors that would otherwise cause memory leaks and security vulnerabilities.
+			Program state can be controlled with a fine granularity using dependent and substructural datatyping methods.
+			This helps to avoid resource handling errors that would otherwise cause memory leaks, security vulnerabilities, and other undefined behavior.
 		</p>
 	</div>
 	</div>
