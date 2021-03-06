@@ -23,32 +23,52 @@
 			width:50vw;			
 			transition: margin 0.3s ease-in-out;
 		}
+		.segment p{
+			padding-right:3vw;
+		}
 		@media only screen and (max-width: 1500px) {
 			.segment{overflow-y:scroll;}
 			
 		}
-		#top{z-index:10; top:0ch; left:0vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
+		#top{z-index:10; top:5ch; left:1vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
 
-		#titlediv{top:12ch; left:6vw; z-index:20; }
+		#titlediv{top:17ch; left:7vw; z-index:20; }
 		#title{z-index:9; background-color:#042E1C; color:#FFDA26ff;}
 
-		#portabilitydiv{top:24ch; left:12vw; z-index:19;}
+		#portabilitydiv{top:29ch; left:13vw; z-index:19;}
 		#portability{z-index:8; background-color:#6A8D79ff; color:#3E0612;
 		}
-		#reliabilitydiv{top:36ch; left:18vw; z-index:18;}
+		#reliabilitydiv{top:41ch; left:19vw; z-index:18;}
 		#reliability{z-index:7; background-color:#3E0612ff; color:#C6BE94;
 		}
-		#stabilitydiv{top:48ch; left:24vw; z-index:17;}
+		#stabilitydiv{top:53ch; left:25vw; z-index:17;}
 		#stability{z-index:6; background-color:#C6BE94ff; color:#042E1C;
 		}
-		#linksdiv{top:60ch; left:30vw; z-index:16;}
+		#linksdiv{top:65ch; left:31vw; z-index:16;}
 		#links{z-index:5; background-color:#042E1C; color:#E9235F;
 		}
-		#contributingdiv{top:72ch; left:36vw; z-index:15;}
-		#contributing{z-index:4; background-color:#A03153ff; color:#042E1C;
+		#contributingdiv{top:77ch; left:37vw; z-index:15;}
+		#contributing{z-index:4; background-color:#E9235F; color:#042E1C;
+		}
+		.bottom-title{
+			position:absolute;
+			top:-4ch;
+			right:1ch;
+			transition:top 0.2s ease-in;
+			transition-delay: 0.2s;
+		}
+		.top-title{
+			position:absolute;
+			bottom:0ch;
+			left:1ch;
+			transition:bottom 0.1s ease-in;
+			transition-delay: 0.3s;
 		}
 		.div:hover .segment {
 			margin-top:85ch;
+		}
+		.div:hover .bottom-title{
+			top:0ch;
 		}
 		a{color:#FFDA26ff; text-decoration:none;}
 		a:hover{color:inherit; text-decoration:underline;}
@@ -60,12 +80,36 @@
 			margin-top:10ch;
 		}
 		#height{
-			height:260ch;
+			height:270ch;
+		}
+		#authors{
+			position:absolute;
+			top:190ch;
+			left:1vw;
+			width:26vw;
+			padding:5ch;
+			font-family:serif;
+			height:50ch;
+			background-color:#FFDA26ff; color:#3E0612;
+			box-shadow: 1ch 2ch 3ch black;
+		}
+		#background-logo{
+			display:none;
+			position:absolute;
+			right:0ch;
+			top:0ch;
+			font-size:70px;
+			font-weight: bold;
+			padding:0;
+			margin:0;
+			color:#3E0612;
 		}
 	</style>
 </head>
 <body>
 	<div id="top" class="segment">
+		<h1 class="bottom-title">&#x25c9;</h1>
+		<h1 class="top-title">&#x1fb18;</h1>
 	<div id="fiber-logo">
 		<h1>
 		<code><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The
@@ -79,13 +123,13 @@ _&#x2571;__&nbsp;&#x2572;___b
 	</div>
 	</div>
 
-	<div id="height">
+	<div id="height"></div>
 
-	</div>
 	<div id="titlediv" class="div">
 	<div id="title" class="segment">
-	
-		
+		<h1 class="bottom-title">&#x25a3;</h1>
+		<h1 class="top-title">&#x1fb2f;</h1>
+		<h1>About Us</h1>
 		<p>
 			The fiber Group is the body of authors responsible for The fiber Language and Environment Standard, or "fiber".
 			We also develop the reference implementation of fiber as well.
@@ -112,6 +156,8 @@ _&#x2571;__&nbsp;&#x2572;___b
 
 	<div id="portabilitydiv" class="div">
 	<div id="portability" class="segment">
+		<h1 class="bottom-title">&#x25CC;</h1>
+		<h1 class="top-title">&#x1fb12;</h1>
 		<h1>Portability</h1>
 		<p>
 			Bran, the fiber Environment, is a self-contained, abstract, computer architecture model, similar to the ones used in C and Rust.
@@ -127,11 +173,14 @@ _&#x2571;__&nbsp;&#x2572;___b
 			Only Broccoli and a BOF object library for system interaction are required.
 			Additionally, once Broccoli is implemented, <i>any and all existing Bran programs in the world can be run on the host system with native performance.</i>
 		</p>
+		
 	</div>
 	</div>
 
 	<div id="reliabilitydiv" class="div">
 	<div id="reliability" class="segment">
+		<h1 class="bottom-title">&#x25a9;</h1>
+		<h1 class="top-title">&#x1fb13;</h1>
 		<h1>Reliability</h1>
 		<p>
 			A unique property of the fiber programming language is that it has a built in proof syntax.
@@ -145,42 +194,51 @@ _&#x2571;__&nbsp;&#x2572;___b
 			Directive statements can than be used to engage fiber's proof system to verify any aspect of a program.
 			This closes the gap between proofs and programs because the types, functions, and variables that would normally be locked inside a foreign proof environment are now part of the implementation language and part of the real, executable program being verified.
 		</p>
+		
 	</div>
 	</div>
 
 	<div id="stabilitydiv" class="div">
 	<div id="stability" class="segment">
-	<h1>Stability</h1>
-		<p>
-			fiber is a standard first, and an implementation second.
-			This means that any change or addition must first go through a long and rigorous process of being vetted and written into the standard.
-			There is no volatility that comes from systems developed by experimenting with the implementation first.
-			The standard documentation is also controlled by a limited number of people.
-			fiber is only "open" regarding its use, not its contributions.
-			This spares fiber from degradation by attempts to chase after temporary and stylistic "fads".
-		</p>
-		<p>
-			The fiber programming language also provides a rich type system alongside its proof syntax.
-			Program state can be controlled with a fine granularity using dependent and substructural datatyping methods.
-			This helps to avoid resource handling errors that would otherwise cause memory leaks, security vulnerabilities, and other undefined behavior.
-		</p>
-	</div>
+		<h1 class="bottom-title">&#x25d4;</h1>
+		<h1 class="top-title">&#x1fb14;</h1>
+		<h1>Stability</h1>
+			<p>
+				fiber is a standard first, and an implementation second.
+				This means that any change or addition must first go through a long and rigorous process of being vetted and written into the standard.
+				There is no volatility that comes from systems developed by experimenting with the implementation first.
+				The standard documentation is also controlled by a limited number of people.
+				fiber is only "open" regarding its use, not its contributions.
+				This spares fiber from degradation by attempts to chase after temporary and stylistic "fads".
+			</p>
+			<p>
+				The fiber programming language also provides a rich type system alongside its proof syntax.
+				Program state can be controlled with a fine granularity using dependent and substructural datatyping methods.
+				This helps to avoid resource handling errors that would otherwise cause memory leaks, security vulnerabilities, and other undefined behavior.
+			</p>
+		</div>
+		
 	</div>
 
 	<div id="linksdiv" class="div">
 	<div id="links" class="segment">
+		<h1 class="bottom-title">&#x25f1;</h1>
+		<h1 class="top-title">&#x1fb19;</h1>
 		<h1>Links</h1>
 		<br>
 		<ul>
-			<li><a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html">The fiber Language and Environment Standard</a></li>
+			<li>The <a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html">The fiber Language and Environment Standard</a> Working Draft</li>
 			<li>Our <a href="https://github.com/The-fiber-Group">Github Repository</a></li>
 			<li>Email the <a href="mailto:smithtrombone@gmail.com">fiber Group</a>.</li>
 		</ul>
+		
 	</div>
 	</div>
 
 	<div id="contributingdiv" class="div">
 	<div id="contributing" class="segment">
+		<h1 class="bottom-title">&#x25ec;</h1>
+		<h1 class="top-title">&#x1fb16;</h1>
 		<h1>Contributing</h1>
 		<p>
 			Outside contributions are welcome.
@@ -197,9 +255,24 @@ _&#x2571;__&nbsp;&#x2572;___b
 			Please keep in mind, joining the fiber Group as an author is an informal per-case decision made by existing authors.
 			The fiber Group is very much intended to be small and exclusive simply by nature of the work being done.
 		</p>
+		
 	</div>
 	</div>
 
+	<div id="authors">
+		<h1>fiber Group Members</h1>
+		<ul>
+			<li>Robin (Central Author)</li>
+		</ul>
+	</div>
+	<div id="background-logo">
+		<code><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___f
+&nbsp;&nbsp;___&#x2571;___i
+_&#x2571;__&nbsp;&#x2572;___b
+&nbsp;&nbsp;&#x2572;&nbsp;&#x2572;____e
+&nbsp;&nbsp;&nbsp;&#x2572;_____r
+	</pre></code>
+	</div>
 	<div id="copyright">
 		<p>This webpage is &copy; Copyright the fiber Group, 2021.</p>
 	</div>
