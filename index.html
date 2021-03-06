@@ -31,6 +31,12 @@
 			
 		}
 		#top{z-index:10; top:5ch; left:1vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
+		#top:hover .bottom-title{
+			top:0ch;
+		}
+		#top:hover .top-title{
+			bottom:0%;
+		}
 
 		#titlediv{top:17ch; left:7vw; z-index:20; }
 		#title{z-index:9; background-color:#042E1C; color:#FFDA26ff;}
@@ -56,19 +62,25 @@
 			right:1ch;
 			transition:top 0.2s ease-in;
 			transition-delay: 0.2s;
+			z-index:100;
+			background-color:#00000000;
 		}
 		.top-title{
 			position:absolute;
-			bottom:0ch;
+			bottom:1%;
 			left:1ch;
 			transition:bottom 0.1s ease-in;
 			transition-delay: 0.3s;
+			z-index:100;
 		}
 		.div:hover .segment {
 			margin-top:85ch;
 		}
 		.div:hover .bottom-title{
 			top:0ch;
+		}
+		.div:hover .top-title{
+			bottom:0%;
 		}
 		a{color:#FFDA26ff; text-decoration:none;}
 		a:hover{color:inherit; text-decoration:underline;}
@@ -108,8 +120,8 @@
 </head>
 <body>
 	<div id="top" class="segment">
-		<h1 class="bottom-title">&#x25c9;</h1>
-		<h1 class="top-title">&#x1fb18;</h1>
+		<h1 class="bottom-title">&#x2501;<h1>
+		<h1 class="top-title">&#x2581;</h1>
 	<div id="fiber-logo">
 		<h1>
 		<code><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The
@@ -128,7 +140,7 @@ _&#x2571;__&nbsp;&#x2572;___b
 	<div id="titlediv" class="div">
 	<div id="title" class="segment">
 		<h1 class="bottom-title">&#x25a3;</h1>
-		<h1 class="top-title">&#x1fb2f;</h1>
+		<h1 class="top-title">&#x2582;</h1>
 		<h1>About Us</h1>
 		<p>
 			The fiber Group is the body of authors responsible for The fiber Language and Environment Standard, or "fiber".
@@ -144,7 +156,7 @@ _&#x2571;__&nbsp;&#x2572;___b
 			<li>a linking loader program, Broccoli,</li>
 			<li>and a linkable binary object format, BOF.</li>
 		</ul>
-		<p>fiber has a few unique advantages compared to other programming languages which are described down below.</p>
+		<p>fiber has a few unique advantages compared to other programming languages which are described on the following cards.</p>
 		<h2>Project Status</h2>
 		<p>
 			Right now, the fiber Language and Environment Standard is incomplete. Don't try to use it with anything serious.
@@ -157,7 +169,7 @@ _&#x2571;__&nbsp;&#x2572;___b
 	<div id="portabilitydiv" class="div">
 	<div id="portability" class="segment">
 		<h1 class="bottom-title">&#x25CC;</h1>
-		<h1 class="top-title">&#x1fb12;</h1>
+		<h1 class="top-title">&#x2583;</h1>
 		<h1>Portability</h1>
 		<p>
 			Bran, the fiber Environment, is a self-contained, abstract, computer architecture model, similar to the ones used in C and Rust.
@@ -180,7 +192,7 @@ _&#x2571;__&nbsp;&#x2572;___b
 	<div id="reliabilitydiv" class="div">
 	<div id="reliability" class="segment">
 		<h1 class="bottom-title">&#x25a9;</h1>
-		<h1 class="top-title">&#x1fb13;</h1>
+		<h1 class="top-title">&#x2584;</h1>
 		<h1>Reliability</h1>
 		<p>
 			A unique property of the fiber programming language is that it has a built in proof syntax.
@@ -201,7 +213,7 @@ _&#x2571;__&nbsp;&#x2572;___b
 	<div id="stabilitydiv" class="div">
 	<div id="stability" class="segment">
 		<h1 class="bottom-title">&#x25d4;</h1>
-		<h1 class="top-title">&#x1fb14;</h1>
+		<h1 class="top-title">&#x2585;</h1>
 		<h1>Stability</h1>
 			<p>
 				fiber is a standard first, and an implementation second.
@@ -223,7 +235,7 @@ _&#x2571;__&nbsp;&#x2572;___b
 	<div id="linksdiv" class="div">
 	<div id="links" class="segment">
 		<h1 class="bottom-title">&#x25f1;</h1>
-		<h1 class="top-title">&#x1fb19;</h1>
+		<h1 class="top-title">&#x2586;</h1>
 		<h1>Links</h1>
 		<br>
 		<ul>
@@ -238,7 +250,7 @@ _&#x2571;__&nbsp;&#x2572;___b
 	<div id="contributingdiv" class="div">
 	<div id="contributing" class="segment">
 		<h1 class="bottom-title">&#x25ec;</h1>
-		<h1 class="top-title">&#x1fb16;</h1>
+		<h1 class="top-title">&#x2587;</h1>
 		<h1>Contributing</h1>
 		<p>
 			Outside contributions are welcome.
