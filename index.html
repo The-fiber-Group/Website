@@ -3,90 +3,178 @@
 	<meta charset="UTF-8">
 	<title>The fiber Group</title>
 	<style>
+		body{margin:0; background-color:#ffffffff; color:#000000ff;}
 		#fiber-logo{width:10%; height:auto; display:inline-block;}
-		#fiber-logo svg{width:100%; height:auto;}
-		#main-title{display:inline;}
+		#fiber-logo pre{font-family:monospace; margin:1ch; }
+		#main-title{display:inline-block;}
+		.div {
+			position:absolute;
+			height:70ch;
+			width:60vw;
+			background-color:#00000000;
+			margin:0;
+		}
+		.segment{
+			padding:5vw;
+			padding-bottom:20ch;
+			margin:0;
+			position:absolute;
+			box-shadow: 3ch 3ch 5ch rgb(32, 32, 32);
+			background-color:#ffffffff;
+			height:50ch;
+			width:50vw;			
+			transition: margin 0.3s ease-in-out;
+		}
+		#title{top:5ch; left:3vw; z-index:20; background-color:#FFDA26ff; color:#3E0612;}
+
+		#portabilitydiv{top:15ch; left:9vw; z-index:19;}
+		#portability{z-index:8; background-color:#6A8D79ff; color:#3E0612;
+		}
+		#reliabilitydiv{top:25ch; left:15vw; z-index:18;}
+		#reliability{z-index:7; background-color:#3E0612ff; color:#C6BE94;
+		}
+		#stabilitydiv{top:35ch; left:21vw; z-index:17;}
+		#stability{z-index:6; background-color:#C6BE94ff; color:#042E1C;
+		}
+		#linksdiv{top:45ch; left:27vw; z-index:16;}
+		#links{z-index:5; background-color:#A03153ff; color:#042E1C;
+		}
+		#contributingdiv{top:55ch; left:33vw; z-index:15;}
+		#contributing{z-index:4; background-color:#433906ff; color:#E9235F;
+		}
+		.div:hover .segment {
+			margin-top:65ch;
+		}
+		a{color:#FFDA26ff; text-decoration:none;}
+		a:hover{color:inherit; text-decoration:underline;}
+		#copyright{
+			position:relative;
+			bottom:5ch;
+			width:100%;
+			text-align:center;
+			margin-top:10ch;
+		}
+		#height{
+			height:200ch;
+		}
 	</style>
 </head>
 <body>
-	<div id="fiber-logo">
-	<svg
-		xmlns:dc="http://purl.org/dc/elements/1.1/"
-		xmlns:cc="http://creativecommons.org/ns#"
-	 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-		xmlns:svg="http://www.w3.org/2000/svg"
-		xmlns="http://www.w3.org/2000/svg"
-		width="148.53735mm"
-		height="146.76465mm"
-		viewBox="0 0 148.53735 146.76465"
-		version="1.1"
-		id="svg8">
-	<defs
-		id="defs2">
-	<rect
-		x="8.8076019"
-	       y="24.571959"
-	       width="202.28346"
-	       height="204.3022"
-	       id="rect857" />
-	<rect
-	       x="57.929005"
-	       y="21.839909"
-	       width="134.60571"
-	       height="161.01134"
-	       id="rect835" />
-	  </defs>
-	  <metadata
-	     id="metadata5">
-	    <rdf:RDF>
-	      <cc:Work
-	         rdf:about="">
-	        <dc:format>image/svg+xml</dc:format>
-	        <dc:type
-	           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-	        <dc:title></dc:title>
-	      </cc:Work>
-	    </rdf:RDF>
-	  </metadata>
-  		<g id="layer1" transform="translate(-8.8066406,-27.517687)"><text xml:space="preserve" id="text855" 
-	style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;line-height:1.25;font-family:Unifont;-inkscape-font-specification:'Unifont, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect857);fill:#000000;fill-opacity:1;stroke:none;">
-	<tspan
-         x="8.8066406"
-         y="49.266666"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;font-family:Unifont;-inkscape-font-specification:'Unifont, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">      ___f
-</tspan></tspan><tspan
-         x="8.8066406"
-         y="80.134666"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;font-family:Unifont;-inkscape-font-specification:'Unifont, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">  ___/___i
-</tspan></tspan><tspan
-         x="8.8066406"
-         y="111.00267"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;font-family:Unifont;-inkscape-font-specification:'Unifont, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">_/__ \___b
-</tspan></tspan><tspan
-         x="8.8066406"
-         y="141.87067"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;font-family:Unifont;-inkscape-font-specification:'Unifont, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">  \ \____e
-</tspan></tspan><tspan
-         x="8.8066406"
-         y="172.73867"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;font-family:Unifont;-inkscape-font-specification:'Unifont, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">   \_____r</tspan></tspan></text>
+	<div id="height">
 
-  		</g>
-	</svg>
 	</div>
-	<h1 id="main-title">The fiber Group</h1>
-	<h2>About Us</h2>
-	<p>
-		The fiber Group is the body of authors responsible for The fiber Language and Environment Standard.
-		We also develop the reference implementation of fiber as well.
-	</p>
-	<h2>About fiber</h2>
-	<p>
-		fiber is a programming language and a program execution environment.
-	</p>
-	<h2>Links</h2>
-	<ul>
-		<li><a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html">The fiber Language and Environment Standard</a></li>
-		<li>Our <a href="https://github.com/The-fiber-Group">Github Repository</a></li>
-	</ul>
+	<div id="title" class="segment">
+	
+		<h1 id="main-title">The fiber Group</h1>
+		<div id="fiber-logo">
+			<code><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___f<br>&nbsp;&nbsp;___/___i<br>_/__&nbsp;\___b<br>&nbsp;&nbsp;\&nbsp;\____e<br>&nbsp;&nbsp;&nbsp;\_____r<br></pre></code>
+				</div>
+		<p>
+			The fiber Group is the body of authors responsible for The fiber Language and Environment Standard, or "fiber".
+			We also develop the reference implementation of fiber as well.
+		</p>
+		<p><i>I say "we", but there's only one author right now, me, Robin. I hope this changes soon.</i></p>
+		<h2>About the fiber Standard</h2>
+		<p>Fiber is an open standard for a programming language and execution environment. It describes...</p>
+		<ul>
+			<li>a programming language, fiber,</li>
+			<li>an abstract computer architecture/model, Bran</li>
+			<li>a linking loader program, Broccoli,</li>
+			<li>and a linkable binary object format, BOF.</li>
+		</ul>
+		fiber has a few unique advantages compared to other programming languages.
+	</div>
+
+	<div id="portabilitydiv" class="div">
+	<div id="portability" class="segment">
+		<h1>Portability</h1>
+		<p>
+			The fiber Environment is separate from the programming language.
+			Bran is a self-contained computer architecture, similar to the ones used by C or Rust, with it's own RISC-style instruction format and binary object format.
+			The instruction set for Bran posesses a few abstractions to ensure that it's architecture-independent for most hardware.
+			Otherwise, it has a near one-to-one relationship with many other instruction set architectures.
+			The BOF object format is capable of containing not only Bran programs, but any other binary format including native hardware instructions.
+		</p>
+		<p>
+			This simplicity brings several advantages.
+			The first is the same "write once, run anywhere" level of portability that other virtual machine-based languages aim for.
+			The second is that it allows implementors to support the fiber programming language with less overhead.
+			Normally, an entire compiler or abstract virtual machine would have to be written or ported for a new architecture to support a programming language.
+			This is a big undertaking.
+		</p>
+		<p>
+			The fiber Environment focuses on reducing the minimum work needed to bring a language to a new architecture.
+			The Broccoli program is a glorified linker/loader.
+			It's only responsibility is to load BOF files, translate any Bran instructions to native instructions, and execute them.
+			The functions Broccoli performs take much less time to implement.
+			The payoff is twofold, fiber is cheaper and faster to support, and once Broccoli is implemented, <i>any and all existing Bran programs can be run on that system.</i>
+		</p>
+	</div>
+	</div>
+
+	<div id="reliabilitydiv" class="div">
+	<div id="reliability" class="segment">
+		<h1>Reliability</h1>
+		<p>
+			A unique property of the fiber programming language is that it has a built in proof syntax.
+			With more and more critical infrastructures relying on software, it has become necessary to formally verify the behavior of critical software components in a system.
+			Unfortunately, there is a disconnect between the systems used to verify a component and the programming languages used to implement it.
+			There is no reliable way to verify that the implementation or even the programming language used for implementation will conform to the verification it was based off of and this has become a sticky situation for many projects.
+		</p>
+		<p>
+			fiber solves this by providing both automated proving capabilities as well as an imperative programming language as part of the same compilation environment.
+			Logic syntax similar to what is found in automated theorem proving languages can be included as annotation to any piece of fiber syntax.
+			Directive statements can than be used to engage fiber's proof system to verify any aspect of a program.
+			This closes the gap because the types, functions, and variables that would normally be locked inside a foreign proof environment are now part of the implementation language and part of the real, executable program being verified.
+		</p>
+	</div>
+	</div>
+
+	<div id="stabilitydiv" class="div">
+	<div id="stability" class="segment">
+	<h1>Stability</h1>
+		<p>
+			fiber is a standard first, and an implementation second.
+			This means that any change or addition must first go through a long and rigorous process of being vetted and written into the standard.
+			There is no volatility that comes from systems developed by experimenting with the implementation first.
+			The standard documentation is also controlled by a limited number of people.
+			fiber is only "open" regarding its use, not its contributions.
+			This spares fiber from degradation by the introduction of fads which has happened to other languages.
+		</p>
+		<p>
+			The fiber programming language also provides a rich type system alongside its proof syntax.
+			Program state can be controlled with a fine granularity using dependent and substructural datatyping.
+			This helps avoid resource handling errors that would otherwise cause memory leaks and security vulnerabilities.
+		</p>
+	</div>
+	</div>
+
+	<div id="linksdiv" class="div">
+	<div id="links" class="segment">
+		<h1>Links</h1>
+		<br>
+		<ul>
+			<li><a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html">The fiber Language and Environment Standard</a></li>
+			<li>Our <a href="https://github.com/The-fiber-Group">Github Repository</a></li>
+			<li>Email the <a href="mailto:smithtrombone@gmail.com">fiber Group</a>.</li>
+		</ul>
+	</div>
+	</div>
+
+	<div id="contributingdiv" class="div">
+	<div id="contributing" class="segment">
+		<h1>Contributing</h1>
+		<p>
+			If you would like to contribute to the standard documentation, please read <a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html#authoring%20changes">(<i>Authoring, 4</i>)</a>.
+			You can submit proposals to the email listed in <b>Links</b>.
+		</p>
+		<p>
+			Joining the fiber Group as an author is an informal per-case decision made by existing authors.
+		</p>
+	</div>
+	</div>
+
+	<div id="copyright">
+		<p>This webpage is &copy; Copyright the fiber Group, 2021.</p>
+	</div>
 </body>
