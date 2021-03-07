@@ -32,7 +32,7 @@
 			.segment{overflow-y:scroll;}
 			
 		}
-		#top{z-index:10; top:10ch; left:1vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
+		#top{z-index:10; top:20ch; left:1vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
 		#top:hover .bottom-title{
 			top:0ch;
 		}
@@ -40,22 +40,22 @@
 			bottom:0%;
 		}
 
-		#titlediv{top:20ch; left:7vw; z-index:20; }
+		#titlediv{top:30ch; left:7vw; z-index:20; }
 		#title{z-index:9; background-color:#042E1C; color:#FFDA26ff;}
 
-		#portabilitydiv{top:30ch; left:13vw; z-index:19;}
+		#portabilitydiv{top:40ch; left:13vw; z-index:19;}
 		#portability{z-index:8; background-color:#6A8D79ff; color:#3E0612;
 		}
-		#reliabilitydiv{top:40ch; left:19vw; z-index:18;}
+		#reliabilitydiv{top:50ch; left:19vw; z-index:18;}
 		#reliability{z-index:7; background-color:#3E0612ff; color:#C6BE94;
 		}
-		#stabilitydiv{top:50ch; left:25vw; z-index:17;}
+		#stabilitydiv{top:60ch; left:25vw; z-index:17;}
 		#stability{z-index:6; background-color:#C6BE94ff; color:#042E1C;
 		}
-		#linksdiv{top:60ch; left:31vw; z-index:16;}
+		#linksdiv{top:70ch; left:31vw; z-index:16;}
 		#links{z-index:5; background-color:#042E1C; color:#E9235F;
 		}
-		#contributingdiv{top:70ch; left:37vw; z-index:15;}
+		#contributingdiv{top:80ch; left:37vw; z-index:15;}
 		#contributing{z-index:4; background-color:#E9235F; color:#042E1C;
 		}
 		.bottom-title{
@@ -105,8 +105,8 @@
 			padding:5ch;
 			font-family:serif;
 			height:50ch;
-			background-color:#FFDA26ff; color:#3E0612;
-			box-shadow: 1ch 2ch 3ch black;
+			/*background-color:#FFDA26ff; color:#3E0612;*/
+			border: 1ch double black;
 		}
 		#background-logo{
 			display:none;
@@ -119,9 +119,40 @@
 			margin:0;
 			color:#3E0612;
 		}
+		#nav ul{
+			font-family:monospace;
+			list-style:none;
+			font-size:large;
+		}
+		#nav li{
+			float:right;
+		}
+		#nav a {
+			color:black;
+			box-shadow:none;
+			transition:background-color 0.2s ease-in-out;
+		}
+		#nav a:hover{
+			text-decoration:none;
+			background-color:#FFDA26ff;
+		}
 	</style>
 </head>
 <body>
+	<div id="nav">
+		<ul>
+			<li>
+				&#x2553;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2556;<br>
+				&#x256c; <a href="#">Targeting the Bran Architecture</a> &#x2563;<br>
+				&#x2559;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x255c;
+			</li>
+			<li>
+				&#x2553;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2556;<br>
+				&#x2560; <a href="#">Programming with Fiber</a> &#x256c;<br>
+				&#x2559;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x255c;
+			</li>
+		</ul>
+	</div>
 	<div id="top" class="segment">
 		<h1 class="bottom-title">&#x2307;</h1>
 		<h1 class="top-title">&#x2581;</h1>
@@ -131,8 +162,8 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___f<br>
 			&nbsp;&nbsp;___&#x2571;___i<br>
 			_&#x2571;__&nbsp;&#x2572;___b<br>
-			&nbsp;&nbsp;&#x2572;&nbsp;&#x2572;____e<br>
-			&nbsp;&nbsp;&nbsp;&#x2572;_____r<br><br>
+			&nbsp;&#x2572;&nbsp;&nbsp;&#x2572;____e<br>
+			&nbsp;&nbsp;&#x2572;______r<br><br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group
 		</code></h1>
 	</div>
