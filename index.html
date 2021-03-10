@@ -5,6 +5,15 @@
 	<style>
 		body{margin:0; background-color:#ffffffff; color:#000000ff;}
 		#fiber-logo{font-size:x-large;font-family:monospace;}
+		a {
+			color:black;
+			text-decoration:underline;
+			transition:color 0.2s ease-in-out;
+		}
+		a:hover{
+			color:#FFDA26FF;
+			text-decoration:none;
+		}
 		.div {
 			position:absolute;
 			height:90ch;
@@ -43,22 +52,18 @@
 
 		#titlediv{top:30ch; left:7vw; z-index:20; }
 		#title{z-index:9; background-color:#042E1C; color:#FFDA26ff;}
-
 		#portabilitydiv{top:40ch; left:13vw; z-index:19;}
-		#portability{z-index:8; background-color:#6A8D79ff; color:#3E0612;
-		}
+		#portability{z-index:8; background-color:#6A8D79ff; color:#3E0612;}
 		#reliabilitydiv{top:50ch; left:19vw; z-index:18;}
-		#reliability{z-index:7; background-color:#3E0612ff; color:#C6BE94;
-		}
+		#reliability{z-index:7; background-color:#3E0612ff; color:#C6BE94;}
 		#stabilitydiv{top:60ch; left:25vw; z-index:17;}
-		#stability{z-index:6; background-color:#C6BE94ff; color:#042E1C;
-		}
+		#stability{z-index:6; background-color:#C6BE94ff; color:#042E1C;}
 		#linksdiv{top:70ch; left:31vw; z-index:16;}
-		#links{z-index:5; background-color:#042E1C; color:#E9235F;
-		}
+		#links{z-index:5; background-color:#042E1C; color:#E9235F;}
+		#links a {color:#FFDA26FF; text-decoration:none;} #links a:hover{color:inherit;}
 		#contributingdiv{top:80ch; left:37vw; z-index:15;}
-		#contributing{z-index:4; background-color:#E9235F; color:#042E1C;
-		}
+		#contributing{z-index:4; background-color:#E9235F; color:#042E1C;}
+		#contributing a {color:#FFDA26FF; text-decoration:none;} #contributing a:hover{color:inherit;}
 		.bottom-title{
 			position:absolute;
 			top:-4ch;
@@ -70,10 +75,15 @@
 		}
 		.top-title{
 			position:absolute;
-			bottom:1%;
+			bottom:1ch;
 			left:1ch;
 			transition:bottom 0.1s ease-in-out;
 			transition-delay: 0.3s;
+		}
+		.right-title{
+			position:absolute;
+			bottom:0ch;
+			right:1ch;
 		}
 		.div:hover .segment {
 			margin-top:85ch;
@@ -84,8 +94,6 @@
 		.div:hover .top-title{
 			bottom:0%;
 		}
-		a{color:#FFDA26ff; text-decoration:none;}
-		a:hover{color:inherit; text-decoration:underline;}
 		#copyright{
 			position:relative;
 			bottom:5ch;
@@ -106,6 +114,17 @@
 			font-family:serif;
 			height:50ch;
 			border: 1ch double black;
+			border-radius:1ch;
+		}
+		#sponsor{
+			font-family:serif;
+			border:1ch double black;
+			border-radius:1ch;
+			width:26vw;
+			padding:5ch;
+			position:absolute;
+			right:1vw;
+			top:190ch;
 		}
 		#background-logo{
 			display:none;
@@ -119,21 +138,24 @@
 			color:#3E0612;
 		}
 		#nav ul{
-			font-family:monospace;
+			font-family:serif;
 			list-style:none;
 			font-size:large;
 			text-align:right;
 		}
 		#nav li{
 			float:right;
-			padding:none;
+			margin-right:3ch;
 		}
 		#nav a {
 			color:black;
 			box-shadow:none;
 			transition:background-color 0.2s ease-in-out;
 			display:inline;
-			padding:none;
+			padding:1ch;
+			border: 1ch double black;
+			border-radius:1ch;
+			text-decoration:none;
 		}
 		#nav a:hover{
 			text-decoration:none;
@@ -159,16 +181,12 @@
 <body>
 	<div id="nav">
 		<ul>
-			<li><code>
-				&#x2553;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2556;<br>
-				&#x256c;&nbsp;<a href="bran-arch.html">Targeting the Bran Architecture</a>&nbsp;&#x2563;<br>
-				&#x2559;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x255c;
-			</code></li>
-			<li><code>
-				&#x2553;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2556;<br>
-				&#x2560;&nbsp;<a href="prog-with-fiber.html">Programming with fiber</a>&nbsp;&#x256c;<br>
-				&#x2559;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x255c;
-			</code></li>
+			<li>
+				<a href="bran-arch.html">Targeting the Bran Architecture</a>
+			</li>
+			<li>
+				<a href="prog-with-fiber.html">Programming with fiber</a>
+			</li>
 		</ul>
 	</div>
 	<div id="top" class="segment">
@@ -193,26 +211,27 @@
 	<div id="title" class="segment">
 		<h1 class="bottom-title">&#x25a3;</h1>
 		<h1 class="top-title">&#x2582;</h1>
-		<h1>About Us</h1>
+		<h1 class="right-title">Info</h1>
+		<h2>About The fiber Group</h2>
 		<p>
-			The fiber Group is the body of authors responsible for The fiber Language and Environment Standard, or "fiber".
+			The fiber Group is the body of authors responsible for The fiber Language and Environment Standard, known as "fiber".
 			We also develop the reference implementation of fiber as well.
 		</p>
-		<p><i>I say "we", but there's only one author right now, me, Robin. I hope this changes soon.</i></p>
+		<p><i>I say "we", but there's only one author right now. I hope this changes soon.</i></p>
 		<h2>About the fiber Standard</h2>
-		<p>Fiber is an open standard for a programming language and execution environment. It describes...</p>
+		<p>Fiber is an international open standard for a programming language and execution environment. It describes...</p>
 		<ul>
 			<li>a programming language, fiber,</li>
 			<li>an abstract computer architecture/model, Bran,</li>
 			<li>a true architecture-independent bytecode, BRISC,</li>
-			<li>a linking loader program, Broccoli,</li>
-			<li>and a linkable binary object format, BOF.</li>
+			<li>a program loader, Broccoli,</li>
+			<li>and a binary object format, the Bran Object File (BOF).</li>
 		</ul>
-		<p>fiber has a few unique advantages compared to other programming languages which are described on the following cards.</p>
+		<p>fiber has a few unique advantages compared to other programming languages which are described on the cards below.</p>
 		<h2>Project Status</h2>
 		<p>
 			Right now, the fiber Language and Environment Standard is incomplete. Don't try to use it with anything serious.
-			The Environment portion of the standard is complete. The Language portion has yet to begin.
+			The Environment portion of the standard is almost finalized. The Language portion is still under heavy development.
 		</p>
 		
 	</div>
@@ -224,20 +243,27 @@
 		<h1 class="top-title">&#x2583;</h1>
 		<h1>Portability</h1>
 		<p>
-			Bran, the fiber Environment, is a self-contained, abstract, computer architecture model, similar to the ones used in C and Rust.
-			Its instruction set, BRISC, has a near one-to-one instruction correlation with many other instruction set architectures.
-			It has a minimal amount of abstractions, enough to guarantee proper memory alignment and data type handling across many different architectures.
-			The BOF object format is capable not only of storing Bran programs, but any other binary format as well.
+			Innovation in processing hardware is starting to trend towards special purpose computing, where the focus was once general purpose applications.
+			If this continues, the computing industry will be flooded with many unique architectures.
+			General purpose computer languages are not designed to handle this change.
+			Most simply require too much work to be ported to a high number of architectures.
+			This is partly why embedded system manufacturers are known to include Forth with their systems; it's just cheaper.
+			fiber is designed to be equally as portable as an assembler program, while still providing high abstraction programming utilities.
 		</p>
 		<p>
-			Bran provides the same "write once, run anywhere" utility of more complex abstract virtual machines.
-			Unlike other abstract environments, the entire Bran architecture is facilitated by the glorified linking loader, Broccoli.
-			The advantage of Bran is twofold. 
+			The portability of fiber lies within its execution model, Bran.
+			Bran is facilitated by two entities, the BOF format and the Broccoli program loader.
+			BOF files store programs using an architecture-independent instruction set called BRISC.
+			BRISC instructions have a one-to-one counterparts in hardware architectures, allowing for easy translation.
+			During the loading process, Broccoli will translate these instructions to the native instruction set of the hardware and then execute the program as if it were written in native assembly syntax.
+		</p>
+		<p>
+			This simplicity allows Bran to provide the same "write once, run anywhere" portability without the complexity of more abstracted virtual machines.
+			The advantage of Bran is then twofold. 
 			It is much cheaper and faster to implement:
-			Only Broccoli and a BOF object library for system interaction are required.
+			Only Broccoli and an optional BOF object library for operating system interaction are required.
 			Additionally, once Broccoli is implemented, <i>any and all existing Bran programs in the world can be run on the host system with native performance.</i>
 		</p>
-		
 	</div>
 	</div>
 
@@ -253,9 +279,9 @@
 			There is no reliable way to verify that the implementation or even the programming language used for implementation will conform to the verification it was based off of and this has become a sticky situation for many projects.
 		</p>
 		<p>
-			fiber solves this by providing both automated proving capabilities as well as an imperative programming language as part of the same language environment.
+			fiber solves this by providing both automated proving capabilities as part of an imperative programming language as part of the same language environment.
 			Logic syntax similar to what is found in automated theorem proving languages can be included as annotation to any piece of fiber syntax.
-			Directive statements can than be used to engage fiber's proof system to verify any aspect of a program.
+			Directive statements can then be used to engage fiber's proof system to verify any aspect of a program.
 			This closes the gap between proofs and programs because the types, functions, and variables that would normally be locked inside a foreign proof environment are now part of the implementation language and part of the real, executable program being verified.
 		</p>
 		
@@ -288,14 +314,14 @@
 	<div id="links" class="segment">
 		<h1 class="bottom-title">&#x25f1;</h1>
 		<h1 class="top-title">&#x2586;</h1>
-		<h1>Links</h1>
+		<h1 class="right-title">Links</h1>
 		<br>
 		<ul>
-			<li>The <a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html">The fiber Language and Environment Standard</a> Working Draft</li>
+			<li>The current working draft of <a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html">The fiber Language and Environment Standard</a></li>
 			<li>Our <a href="https://github.com/The-fiber-Group">Github Repository</a></li>
 			<li>Email the <a href="mailto:yosngne@gmail.com">fiber Group</a>.</li>
 		</ul>
-		<h2>Binary Downloads</h2>
+		<h2>Binary Downloads (Not yet available...)</h2>
 		<p>
 			The reference implementation of fiber is distributed in two packages.
 			The <b>Broccoli</b> package contains the Broccoli loader which supports the execution of BOF objects.
@@ -314,21 +340,27 @@
 	<div id="contributing" class="segment">
 		<h1 class="bottom-title">&#x25ec;</h1>
 		<h1 class="top-title">&#x2587;</h1>
-		<h1>Contributing</h1>
+		<h1 class="right-title">Contributing</h1>
+		<h2>Feature Proposals</h2>
 		<p>
 			Outside contributions are welcome.
 			If you would like to contribute to the standard documentation, please read <a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html#authoring%20changes">(<i>Authoring, 5</i>)</a>.
-			You can submit proposals to the email listed in <b>Links</b>.
-			Please keep in mind that very few external proposals will be accepted.
+			You can <a href="mailto:yosngne@gmail.com">submit</a> proposals to the email listed in <b>Links</b>.
+			Please keep in mind that not every external proposal will be accepted, but including as many details as you can will definitely help.
 		</p>
 		<p>
 			If your proposal is accepted into the standard documentation, your name as it appears on the proposal will be included in the list of external authors at the bottom of the standard document.
 		</p>
-		<h2>Becoming an Author</h2>
+		<h2>Joining The fiber Group</h2>
 		<p>
-			If you would like to join the fiber Group as an author, send a request with a resume of your roles in previous projects of a similar nature.
-			Please keep in mind, joining the fiber Group as an author is an informal per-case decision made by existing authors.
-			The fiber Group is very much intended to be small and exclusive simply by nature of the work being done.
+			If you would like to become a volunteer member of the fiber Group, <a href="mailto:yosngne@gmail.com">email</a> a request with a description of your roles in previous projects of a similar nature.
+			Please keep in mind, joining the fiber Group as an author is an informal per-case decision made by the existing authors.
+			The fiber Group is primarily a decision-making body and is very much intended to be small and exclusive.
+		</p>
+		<h2>Donating</h2>
+		<p>
+			fiber is a volunteer effort at this time and we do not yet have an established system for receiving financial contributions that guarantee your money's being spent towards fiber.
+			If you are determined to give us money, please reach out to us and we'll see what arrangements can be made.
 		</p>
 		
 	</div>
@@ -337,8 +369,14 @@
 	<div id="authors">
 		<h1>fiber Group Members</h1>
 		<ul>
-			<li>Robin (Central Author)</li>
+			<li><i>Central Author:</i> Daniel (Robin) Smith</li>
 		</ul>
+	</div>
+	<div id="sponsor">
+		<h1>Your Name Here!</h1>
+		<p>
+			Inquire now about <a href="mailto:yosngne@gmail.com">becoming a sponsor</a>!
+		</p>
 	</div>
 	<div id="background-logo">
 		<code><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___f
