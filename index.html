@@ -4,7 +4,7 @@
 	<title>The fiber Group</title>
 	<style>
 		body{margin:0; background-color:#ffffffff; color:#000000ff;}
-		#fiber-logo{font-size:x-large;font-family:monospace;}
+		#fiber-logo{font-size:large;font-family:monospace;position:absolute;top:0;left:15ch;}
 		a {
 			color:black;
 			text-decoration:underline;
@@ -16,11 +16,13 @@
 		}
 		.div {
 			position:absolute;
-			height:90ch;
-			width:60vw;
 			background-color:#00000000;
 			margin:0;
 			overflow:visible;
+			transition-property:all;
+			transition-duration:0.3s;
+			transition-timing-function: ease-in-out;
+			cursor:pointer;
 		}
 		.segment{
 			padding:5vw;
@@ -29,20 +31,22 @@
 			position:absolute;
 			box-shadow: 1ch 2ch 3ch black;
 			background-color:#ffffffff;
-			height:70ch;
-			width:50vw;			
-			transition: margin 0.3s ease-in-out;
+			height:40ch;
+			width:40vw;
+			transition-property: all;
+			transition-duration: 0.3s;
+			transition-timing-function: ease-in-out;
 			overflow:visible;
 			font-family:sans-serif;
 		}
-		.segment p{
-			padding-right:3vw;
+		.segment .contents{
+			position:relative;
+			left:-100vw;
+			width:100%;
+			transition-property:all;
 		}
-		@media only screen and (max-width: 1500px) {
-			.segment{overflow-y:scroll;}
-			
-		}
-		#top{z-index:10; top:20ch; left:1vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
+		
+		#top{z-index:10; top:10ch; left:1vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
 		#top:hover .bottom-title{
 			top:0ch;
 		}
@@ -50,49 +54,51 @@
 			bottom:0%;
 		}
 
-		#titlediv{top:30ch; left:7vw; z-index:20; }
+		#titlediv{top:20ch; left:8vw; z-index:20; }
 		#title{z-index:9; background-color:#042E1C; color:#FFDA26ff;}
-		#portabilitydiv{top:40ch; left:13vw; z-index:19;}
+		#portabilitydiv{top:30ch; left:15vw; z-index:19;}
 		#portability{z-index:8; background-color:#6A8D79ff; color:#3E0612;}
-		#reliabilitydiv{top:50ch; left:19vw; z-index:18;}
+		#reliabilitydiv{top:40ch; left:22vw; z-index:18;}
 		#reliability{z-index:7; background-color:#3E0612ff; color:#C6BE94;}
-		#stabilitydiv{top:60ch; left:25vw; z-index:17;}
+		#stabilitydiv{top:50ch; left:29vw; z-index:17;}
 		#stability{z-index:6; background-color:#C6BE94ff; color:#042E1C;}
-		#linksdiv{top:70ch; left:31vw; z-index:16;}
+		#linksdiv{top:60ch; left:36vw; z-index:16;}
 		#links{z-index:5; background-color:#042E1C; color:#E9235F;}
 		#links a {color:#FFDA26FF; text-decoration:none;} #links a:hover{color:inherit;}
-		#contributingdiv{top:80ch; left:37vw; z-index:15;}
+		#contributingdiv{top:70ch; left:43vw; z-index:15;}
 		#contributing{z-index:4; background-color:#E9235F; color:#042E1C;}
 		#contributing a {color:#FFDA26FF; text-decoration:none;} #contributing a:hover{color:inherit;}
+
+		@media only screen and (max-width: 1500px) {
+			.contents{overflow-y:scroll;}
+		}
 		.bottom-title{
 			position:absolute;
 			top:-4ch;
 			right:1vw;
 			transition:top 0.2s ease-out;
-			transition-delay: 0.2s;
 			background-color:#00000000;
 			font-size:7ch;
 		}
 		.top-title{
 			position:absolute;
-			bottom:1ch;
+			bottom:0ch;
 			left:1ch;
 			transition:bottom 0.1s ease-in-out;
-			transition-delay: 0.3s;
 		}
 		.right-title{
 			position:absolute;
 			bottom:0ch;
 			right:1ch;
 		}
-		.div:hover .segment {
-			margin-top:85ch;
-		}
 		.div:hover .bottom-title{
 			top:0ch;
 		}
 		.div:hover .top-title{
 			bottom:0%;
+		}
+		.div:hover .segment p{
+			display:block;
 		}
 		#copyright{
 			position:relative;
@@ -102,7 +108,7 @@
 			margin-top:10ch;
 		}
 		#height{
-			height:270ch;
+			height:250ch;
 		}
 		#authors{
 			font-family:serif;
@@ -144,18 +150,20 @@
 			text-align:right;
 		}
 		#nav li{
-			float:right;
 			margin-right:3ch;
+			display:block;
+			margin-bottom:1ch;
 		}
 		#nav a {
 			color:black;
 			box-shadow:none;
 			transition:background-color 0.2s ease-in-out;
-			display:inline;
+			display:inline-block;
 			padding:1ch;
 			border: 1ch double black;
 			border-radius:1ch;
 			text-decoration:none;
+			margin:0;
 		}
 		#nav a:hover{
 			text-decoration:none;
@@ -193,7 +201,7 @@
 		<h1 class="bottom-title">&#x2307;</h1>
 		<h1 class="top-title">&#x2581;</h1>
 	<div id="fiber-logo">
-		<h1><code>
+		<h1>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The<br><br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___f<br>
 			&nbsp;&nbsp;___&#x2571;___i<br>
@@ -201,7 +209,7 @@
 			&nbsp;&#x2572;&nbsp;&nbsp;&#x2572;____e<br>
 			&nbsp;&nbsp;&#x2572;______r<br><br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group
-		</code></h1>
+		</h1>
 	</div>
 	</div>
 
@@ -212,6 +220,7 @@
 		<h1 class="bottom-title">&#x25a3;</h1>
 		<h1 class="top-title">&#x2582;</h1>
 		<h1 class="right-title">Info</h1>
+		<div class="contents">
 		<h2>About The fiber Group</h2>
 		<p>
 			The fiber Group is the body of authors responsible for The fiber Language and Environment Standard, known as "fiber".
@@ -233,7 +242,7 @@
 			Right now, the fiber Language and Environment Standard is incomplete. Don't try to use it with anything serious.
 			The Environment portion of the standard is almost finalized. The Language portion is still under heavy development.
 		</p>
-		
+		</div>
 	</div>
 	</div>
 
@@ -241,6 +250,7 @@
 	<div id="portability" class="segment">
 		<h1 class="bottom-title">&#x25CC;</h1>
 		<h1 class="top-title">&#x2583;</h1>
+		<div class="contents">
 		<h1>Portability</h1>
 		<p>
 			Innovation in processing hardware is starting to trend towards special purpose computing, where the focus was once general purpose applications.
@@ -266,11 +276,13 @@
 		</p>
 	</div>
 	</div>
+	</div>
 
 	<div id="reliabilitydiv" class="div">
 	<div id="reliability" class="segment">
 		<h1 class="bottom-title">&#x25a9;</h1>
 		<h1 class="top-title">&#x2584;</h1>
+		<div class="contents">
 		<h1>Reliability</h1>
 		<p>
 			A unique property of the fiber programming language is that it has a built in proof syntax.
@@ -284,7 +296,7 @@
 			Directive statements can then be used to engage fiber's proof system to verify any aspect of a program.
 			This closes the gap between proofs and programs because the types, functions, and variables that would normally be locked inside a foreign proof environment are now part of the implementation language and part of the real, executable program being verified.
 		</p>
-		
+		</div>
 	</div>
 	</div>
 
@@ -292,6 +304,7 @@
 	<div id="stability" class="segment">
 		<h1 class="bottom-title">&#x25d4;</h1>
 		<h1 class="top-title">&#x2585;</h1>
+		<div class="contents">
 		<h1>Stability</h1>
 			<p>
 				fiber is a standard first, and an implementation second.
@@ -307,7 +320,7 @@
 				This helps to avoid resource handling errors that would otherwise cause memory leaks, security vulnerabilities, and other undefined behavior.
 			</p>
 		</div>
-		
+	</div>
 	</div>
 
 	<div id="linksdiv" class="div">
@@ -315,6 +328,7 @@
 		<h1 class="bottom-title">&#x25f1;</h1>
 		<h1 class="top-title">&#x2586;</h1>
 		<h1 class="right-title">Links</h1>
+		<div class="contents">
 		<br>
 		<ul>
 			<li>The current working draft of <a href="https://the-fiber-group.github.io/fiber-Language-and-Environment-Standard/fiber%20Language%20&%20Environment%20Standard.html">The fiber Language and Environment Standard</a></li>
@@ -333,6 +347,7 @@
 			<tr><th>OS X</th><td id="lnk"><a href="">&check;</a></td><td>&cross;</td><td id="lnk"><a href="">&check;</a></td><th style="border:none;"></th><td id="lnk"><a href="">&check;</a></td><td>&cross;</td><td id="lnk"><a href="">&check;</a></td></tr>
 			<tr><th>Windows</th><td id="lnk"><a href="">&check;</a></td><td>&cross;</td><td>&cross;</td><th style="border:none;"></th><td id="lnk"><a href="">&check;</a></td><td>&cross;</td><td>&cross;</td></tr>
 		</table>
+		</div>
 	</div>
 	</div>
 
@@ -341,6 +356,7 @@
 		<h1 class="bottom-title">&#x25ec;</h1>
 		<h1 class="top-title">&#x2587;</h1>
 		<h1 class="right-title">Contributing</h1>
+		<div class="contents">
 		<h2>Feature Proposals</h2>
 		<p>
 			Outside contributions are welcome.
@@ -362,7 +378,7 @@
 			fiber is a volunteer effort at this time and we do not yet have an established system for receiving financial contributions that guarantee your money's being spent towards fiber.
 			If you are determined to give us money, please reach out to us and we'll see what arrangements can be made.
 		</p>
-		
+		</div>
 	</div>
 	</div>
 
@@ -390,3 +406,99 @@ _&#x2571;__&nbsp;&#x2572;___b
 		<p>This webpage is &copy; Copyright the fiber Group, 2021.</p>
 	</div>
 </body>
+<script>
+	/*
+		for each card:
+		on click check if card is focused, if card is not focused, 
+		then increase height and top margin and bring content into view.
+		if card is focused, decrease height and margin and move content
+		out of view
+		if a card is focused, all other cards must be reset.
+	*/
+	function focus(x)
+	{
+		if(x.isFocused)
+		{
+			x.style.marginTop = "0ch";
+			x.style.height = "40ch";
+			x.getElementsByClassName("contents").item(0).style.transitionDelay = "0s";
+			x.getElementsByClassName("contents").item(0).style.left = "-100vw";
+			x.isFocused = false;
+		}
+		else
+		{
+			resetAll();
+			x.style.marginTop = "55ch";
+			x.style.height = "70ch";
+			x.getElementsByClassName("contents").item(0).style.transitionDelay = "0.3s";
+			x.getElementsByClassName("contents").item(0).style.left = "0vw";
+			x.isFocused = true;
+		}
+	}
+	var title = document.getElementById("title");
+	title.isFocused = false;
+	title.onclick = function (){focus(title);};
+	
+	var por = document.getElementById("portability");
+	por.isFocused = false;
+	por.onclick = function(){focus(por);};
+
+	var rel = document.getElementById("reliability");
+	rel.isFocused = false;
+	rel.onclick = function(){focus(rel);};
+
+	var sta = document.getElementById("stability");
+	sta.isFocused = false;
+	sta.onclick = function(){focus(sta);};
+
+	var links = document.getElementById("links");
+	links.isFocused = false;
+	links.onclick = function(){focus(links);};
+
+	var cont = document.getElementById("contributing");
+	cont.isFocused = false;
+	cont.onclick = function(){focus(cont);};
+
+	function resetAll()
+	{
+		var x;
+		x = title;
+		x.style.marginTop = "0ch";
+		x.style.height = "40ch";
+		x.getElementsByClassName("contents").item(0).style.transitionDelay = "0s";
+		x.getElementsByClassName("contents").item(0).style.left = "-100vw";
+		x.isFocused = false;
+		x = por;
+		x.style.marginTop = "0ch";
+		x.style.height = "40ch";
+		x.getElementsByClassName("contents").item(0).style.transitionDelay = "0s";
+		x.getElementsByClassName("contents").item(0).style.left = "-100vw";
+		x.isFocused = false;
+		x = rel;
+		x.style.marginTop = "0ch";
+		x.style.height = "40ch";
+		x.getElementsByClassName("contents").item(0).style.transitionDelay = "0s";
+		x.getElementsByClassName("contents").item(0).style.left = "-100vw";
+		x.isFocused = false;
+		x = sta;
+		x.style.marginTop = "0ch";
+		x.style.height = "40ch";
+		x.getElementsByClassName("contents").item(0).style.transitionDelay = "0s";
+		x.getElementsByClassName("contents").item(0).style.left = "-100vw";
+		x.isFocused = false;
+		x = links;
+		x.style.marginTop = "0ch";
+		x.style.height = "40ch";
+		x.getElementsByClassName("contents").item(0).style.transitionDelay = "0s";
+		x.getElementsByClassName("contents").item(0).style.left = "-100vw";
+		x.isFocused = false;
+		x = cont;
+		x.style.marginTop = "0ch";
+		x.style.height = "40ch";
+		x.getElementsByClassName("contents").item(0).style.transitionDelay = "0s";
+		x.getElementsByClassName("contents").item(0).style.left = "-100vw";
+		x.isFocused = false;
+	}
+	t = document.getElementById("top");
+	t.onclick = function(){resetAll();};
+</script>
