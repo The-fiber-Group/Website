@@ -5,35 +5,15 @@
 	<style>
 		body{color:black;background-color:white;}
 		a{text-decoration:none;}
-		#nav{
-			height:10ch;
-		}
-		#nav ul{
-			font-family:serif;
-			list-style:none;
-			font-size:large;
-			text-align:right;
-		}
-		#nav li{
-			margin-right:3ch;
-			display:block;
-			margin-bottom:1ch;
-		}
-		#nav a {
-			color:black;
-			box-shadow:none;
-			transition:background-color 0.2s ease-in-out;
-			display:inline-block;
-			padding:1ch;
-			border: 1ch double black;
-			border-radius:1ch;
-			text-decoration:none;
-			margin:0;
-		}
-		#nav a:hover{
-			text-decoration:none;
-			background-color:#FFDA26ff;
-		}
+		#nav{height:10ch;}
+		#nav ul{font-family:serif;list-style:none;font-size:large;text-align:right;}
+		#nav li{margin-right:3ch;display:block;margin-bottom:1ch;}
+		#nav a {color:black;box-shadow:none;transition:background-color 0.2s ease-in-out;
+			display:inline-block;padding:1ch;border: 1ch double black;border-radius:1ch;
+			text-decoration:none;margin:0;}
+		#nav a:hover{text-decoration:none;background-color:#FFDA26ff;}
+		#main{margin-top:10ch;width:70%;margin-left:15%;}
+		code{background-color:black;color:#FFDA26ff;padding:1ch;}
 	</style>
 </head>
 <body>
@@ -47,12 +27,83 @@
 			</li>
 		</ul>
 	</div>
-	<div>
+	<div id="main">
+		<h1 style="color:red;">The features and syntax shown below are subject to change!</h1>
+		<h1>Basic Syntax</h1>
+		<h2>Tokens</h2>
 		<p>
-			This page will teach you how to use Fiber to write programs.
+			Fiber syntax is made of two kinds of tokens, <u>symbols</u> and <u>terminals</u>. 
+			Symbols are used for keywords and naming things like variables or functions.
+			Terminals are used for operators and delimiters.
+			The two of these together are used to make various expressions.
 		</p>
 		<p>
-			More to come soon!
+			Symbols are made of alphanumeric characters and the dash character.
+			Terminals are made of non-alphanumeric characters including the dash character.
+			Because both symbols and terminals can use the dash character, symbols cannot begin or end with a dash.
+		</p>
+		<p>
+			This is a symbol: <code>a----sym-bol</code>
+		</p>
+		<p>
+			This is not a symbol: <code>--symbol--</code>
+		</p>
+		<p>
+			All tokens are delimited by whitespace, blank characters, and other non-printable characters such as line feeds and tabs.
+			There are no special characters or delimiting tokens.
+			Additionally, symbols can delimit terminals and terminals can delimit symbols.
+			These rules produce syntax that is slightly different than normal programming languages.
+			For example:
+		</p>
+		<p>
+			This is a pair of nested parentheses: <code>( ( ) )</code>
+		</p>
+		<p>
+			This is a single pair of double-paren delimiters: <code>(( ))</code>
+		</p>
+		<p>
+			In the two expressions, <code>x*-</code> and <code>x* -</code>, the asterisk and dash form three different operators, <code>*-</code> from the first expression, <code>*</code> and <code>-</code> from the second due to their being separated by a space.
+		</p>
+		<p>
+			This behavior may seem harder to read at first, but the requirement of verbose spacing between separate tokens reduces terse expressions that would normally be ambiguous in other languages.
+		</p>
+		<h2>Numbers</h2>
+		<p>
+			Numbers can be either decimal or hexadecimal.
+			Decimal numbers can use a sign prefix and a radix point.
+			Hexadecimal numbers use the digits 0-9 and the capital letters A-F and they have to be prefixed with "0x".
+		</p>
+		<p>
+			Here are some examples of numbers:<br>
+			<code>1</code><br>
+			<code>1.1</code><br>
+			<code>-0.010</code><br>
+			<code>0xDEADBEEF</code>
+		</p>
+		<h2>Strings</h2>
+		<p>
+			Strings can contain ASCII characters, Unicode characters, or raw binary data as a "byte string".
+			All strings are surrounded by double quotations.
+			Byte strings replace the opening double quotation with a special opening quotation, <code>#"</code>.
+		</p>
+		<p>
+			Strings are ASCII by default, unless they include a Unicode character via a UTF-8 encoded character in the source file or through a character escape sequence in the string.
+			Single characters are escaped into a string using the backslash prefix.
+			Double quotations and backslashes are included in a string like so: <code>"\""</code>, <code>"\\"</code>
+		</p>
+		<p>
+			Non-printable characters are inserted using their hexadecimal encoded number.
+			The space character would be escaped into a string using <code>"\20"</code>.
+			Unicode characters are escaped by adding a capital U after the backslash and then a four digit hexadecimal number, <code>"\U20F0"</code>.
+		</p>
+		<p>
+			Byte strings use a series of two-digit hexadecimal codes to specify each 8 bit byte value in the string.
+			Spaces are allows, but not required between each number in a byte string.
+			Ex: <code>#"01 FF A3"</code> is the same as <code>#"01FFA3"</code>
+		</p>
+		<h3>Character Literals</h3>
+		<p>
+			Character literals are represented simply by including only one character inside a string, <code>"A"</code>.
 		</p>
 	</div>
 </body>

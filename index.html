@@ -5,54 +5,17 @@
 	<style>
 		body{margin:0; background-color:#ffffffff; color:#000000ff;}
 		#Fiber-logo{font-size:large;font-family:monospace;position:absolute;top:0;left:15ch;}
-		a {
-			color:black;
-			text-decoration:underline;
-			transition:color 0.2s ease-in-out;
-		}
-		a:hover{
-			color:#FFDA26FF;
-			text-decoration:none;
-		}
-		.div {
-			position:absolute;
-			background-color:#00000000;
-			margin:0;
-			overflow:visible;
-			transition-property:all;
-			transition-duration:0.3s;
-			transition-timing-function: ease-in-out;
-			cursor:pointer;
-		}
-		.segment{
-			padding:5vw;
-			padding-bottom:20ch;
-			margin:0;
-			position:absolute;
-			box-shadow: 1ch 2ch 3ch black;
-			background-color:#ffffffff;
-			height:40ch;
-			width:40vw;
-			transition-property: all;
-			transition-duration: 0.3s;
-			transition-timing-function: ease-in-out;
-			overflow:visible;
-			font-family:sans-serif;
-		}
-		.segment .contents{
-			position:relative;
-			left:-100vw;
-			width:100%;
-			transition-property:all;
-		}
+		a {color:black;text-decoration:underline;transition:color 0.2s ease-in-out;}
+		a:hover{color:#FFDA26FF;text-decoration:none;}
+		.div {position:absolute;background-color:#00000000;margin:0;overflow:visible;
+			transition-property:all;transition-duration:0.3s;transition-timing-function: ease-in-out;cursor:pointer;}
+		.segment{padding:5vw;padding-bottom:20ch;margin:0;position:absolute;box-shadow: 1ch 2ch 3ch black;
+			background-color:#ffffffff;height:40ch;width:40vw;transition-property: all;transition-duration: 0.3s;
+			transition-timing-function: ease-in-out;overflow:visible;font-family:sans-serif;}
+		.segment .contents{position:relative;left:-100vw;width:100%;transition-property:all;}
 		
 		#top{z-index:10; top:10ch; left:1vw; z-index:50; text-align:center; background-color:#FFDA26ff; color:#3E0612;}
-		#top:hover .bottom-title{
-			top:0ch;
-		}
-		#top:hover .top-title{
-			bottom:0%;
-		}
+		#top:hover .bottom-title{top:0ch;}#top:hover .top-title{bottom:0%;}
 
 		#titlediv{top:20ch; left:8vw; z-index:20; }
 		#title{z-index:9; background-color:#042E1C; color:#FFDA26ff;}
@@ -69,128 +32,36 @@
 		#contributing{z-index:4; background-color:#E9235F; color:#042E1C;}
 		#contributing a {color:#FFDA26FF; text-decoration:none;} #contributing a:hover{color:inherit;}
 
-		@media only screen and (max-width: 1500px) {
-			.contents{overflow-y:scroll; height:100%;}
-		}
-		.bottom-title{
-			position:absolute;
-			top:-4ch;
-			right:1vw;
-			transition:top 0.2s ease-out;
-			background-color:#00000000;
-			font-size:7ch;
-		}
-		.top-title{
-			position:absolute;
-			bottom:1%;
-			left:1ch;
-			transition:bottom 0.1s ease-in-out;
-		}
-		.right-title{
-			position:absolute;
-			bottom:0ch;
-			right:1ch;
-		}
-		.div:hover .bottom-title{
-			top:0ch;
-		}
-		.div:hover .top-title{
-			bottom:0%;
-		}
-		.div:hover .segment p{
-			display:block;
-		}
-		#copyright{
-			position:relative;
-			bottom:5ch;
-			width:100%;
-			text-align:center;
-			margin-top:10ch;
-		}
-		#height{
-			height:250ch;
-		}
-		#authors{
-			font-family:serif;
-			position:absolute;
-			top:190ch;
-			left:1vw;
-			width:26vw;
-			padding:5ch;
-			font-family:serif;
-			height:50ch;
-			border: 1ch double black;
-			border-radius:1ch;
-		}
-		#sponsor{
-			font-family:serif;
-			border:1ch double black;
-			border-radius:1ch;
-			width:26vw;
-			padding:5ch;
-			position:absolute;
-			right:1vw;
-			top:190ch;
-		}
-		#background-logo{
-			display:none;
-			position:absolute;
-			right:0ch;
-			top:0ch;
-			font-size:70px;
-			font-weight: bold;
-			padding:0;
-			margin:0;
-			color:#3E0612;
-		}
-		#nav ul{
-			font-family:serif;
-			list-style:none;
-			font-size:large;
-			text-align:right;
-		}
-		#nav li{
-			margin-right:3ch;
-			display:block;
-			margin-bottom:1ch;
-		}
-		#nav a {
-			color:black;
-			box-shadow:none;
-			transition:background-color 0.2s ease-in-out;
-			display:inline-block;
-			padding:1ch;
-			border: 1ch double black;
-			border-radius:1ch;
-			text-decoration:none;
-			margin:0;
-		}
-		#nav a:hover{
-			text-decoration:none;
-			background-color:#FFDA26ff;
-		}
-		#links th, #links td{
-			border: 1px solid;
-			border-collapse:collapse;
-			text-align:center;
-			padding:1ch;
-		}
-		#links table a {
-			text-decoration:none;
-			width:100%;
-			height:auto;
-		}
-		#links table a:hover, #lnk:hover{
-			background-color:#E9235F;
-			color:#042E1C;
-		}
+		@media only screen and (max-width: 1500px) {.contents{overflow-y:scroll; height:100%;}}
+		.bottom-title{position:absolute;top:-4ch;right:1vw;transition:top 0.2s ease-out;background-color:#00000000;font-size:7ch;}
+		.top-title{position:absolute;bottom:1%;left:1ch;transition:bottom 0.1s ease-in-out;}
+		.right-title{position:absolute;bottom:0ch;right:1ch;}
+		.div:hover .bottom-title{top:0ch;}
+		.div:hover .top-title{bottom:0%;}
+		.div:hover .segment p{display:block;}
+		#copyright{position:relative;bottom:5ch;width:100%;text-align:center;margin-top:10ch;}
+		#height{height:250ch;}
+		#authors{font-family:serif;position:absolute;top:190ch;left:1vw;width:26vw;padding:5ch;
+		font-family:serif;height:50ch;border: 1ch double black;border-radius:1ch;}
+		#sponsor{font-family:serif;border:1ch double black;border-radius:1ch;
+		width:26vw;padding:5ch;position:absolute;right:1vw;top:190ch;}
+		#background-logo{display:none;position:absolute;right:0ch;top:0ch;font-size:70px;
+			font-weight: bold;padding:0;margin:0;color:#3E0612;}
+		#nav ul{font-family:serif;list-style:none;font-size:large;text-align:right;}
+		#nav li{margin-right:3ch;display:block;margin-bottom:1ch;}
+		#nav a {color:black;box-shadow:none;transition:background-color 0.2s ease-in-out;display:inline-block;padding:1ch;
+			border: 1ch double black;border-radius:1ch;text-decoration:none;margin:0;}
+		#nav a:hover{text-decoration:none;background-color:#FFDA26ff;}
+		#links th, #links td{border: 1px solid;border-collapse:collapse;text-align:center;padding:1ch;}
+		#links table a {text-decoration:none;width:100%;height:auto;}
+		#links table a:hover, #lnk:hover{background-color:#E9235F;color:#042E1C;}
 	</style>
 </head>
 <body>
 	<div id="nav">
 		<ul>
 			<li>
-				<a href="prog-with-Fiber.html">Programming with Fiber</a>
+				<a href="prog-with-fiber.html">Programming with Fiber</a>
 			</li>
 			<li>
 				<a href="bran-arch.html">Targeting the Bran Architecture</a>
